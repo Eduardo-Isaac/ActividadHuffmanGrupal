@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ActividadHuffmanGrupal.iml" filepath="$PROJECT_DIR$/.idea/ActividadHuffmanGrupal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProgramaHuffman/ProgramaHuffman.iml" filepath="$PROJECT_DIR$/ProgramaHuffman/ProgramaHuffman.iml" />
+    </modules>
+  </component>
+</project>
