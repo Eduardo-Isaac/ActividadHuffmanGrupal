@@ -22,7 +22,12 @@ public class ArbolHuffman {
             Nodo izq = heap.extraerMin();
             Nodo der = heap.extraerMin();
 
-            Nodo padre = new Nodo(izq.frecuencia + der.frecuencia, izq, der);
+            Nodo padre = new Nodo(
+                    izq.getFrecuencia() + der.getFrecuencia(),
+                    izq,
+                    der
+            );
+
             heap.insertar(padre);
         }
 
@@ -39,10 +44,10 @@ public class ArbolHuffman {
         if (nodo == null) return;
 
         if (nodo.esHoja()) {
-            mapa.put(nodo.caracter, codigo);
+            mapa.put(nodo.getCaracter(), codigo);
         }
 
-        generar(nodo.izquierda, codigo + "0", mapa);
-        generar(nodo.derecha, codigo + "1", mapa);
+        generar(nodo.getIzquierda(), codigo + "0", mapa);
+        generar(nodo.getDerecha(), codigo + "1", mapa);
     }
 }

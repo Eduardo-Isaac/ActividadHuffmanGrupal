@@ -1,25 +1,41 @@
 package Model;
 
-import java.util.ArrayList;
-
 public class Nodo implements Comparable<Nodo> {
-    char caracter;
-    int frecuencia;
-    Nodo izquierda, derecha;
+    private char caracter;
+    private int frecuencia;
+    private Nodo izquierda;
+    private Nodo derecha;
 
     public Nodo(char caracter, int frecuencia) {
         this.caracter = caracter;
         this.frecuencia = frecuencia;
     }
 
-    public Nodo(int frecuencia, Nodo izq, Nodo der) {
+    public Nodo(int frecuencia, Nodo izquierda, Nodo derecha) {
         this.frecuencia = frecuencia;
-        this.izquierda = izq;
-        this.derecha = der;
+        this.izquierda = izquierda;
+        this.derecha = derecha;
     }
 
     public boolean esHoja() {
         return izquierda == null && derecha == null;
+    }
+
+    // Getters
+    public char getCaracter() {
+        return caracter;
+    }
+
+    public int getFrecuencia() {
+        return frecuencia;
+    }
+
+    public Nodo getIzquierda() {
+        return izquierda;
+    }
+
+    public Nodo getDerecha() {
+        return derecha;
     }
 
     @Override

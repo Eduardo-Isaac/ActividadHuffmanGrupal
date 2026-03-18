@@ -1,4 +1,5 @@
 package Model;
+
 import java.util.ArrayList;
 
 public class HeapMin {
@@ -30,7 +31,9 @@ public class HeapMin {
     private void subir(int i) {
         int padre = (i - 1) / 2;
 
-        if (i > 0 && heap.get(i).frecuencia < heap.get(padre).frecuencia) {
+        if (i > 0 &&
+                heap.get(i).getFrecuencia() < heap.get(padre).getFrecuencia()) {
+
             intercambiar(i, padre);
             subir(padre);
         }
@@ -42,12 +45,14 @@ public class HeapMin {
         int menor = i;
 
         if (izq < heap.size() &&
-                heap.get(izq).frecuencia < heap.get(menor).frecuencia) {
+                heap.get(izq).getFrecuencia() < heap.get(menor).getFrecuencia()) {
+
             menor = izq;
         }
 
         if (der < heap.size() &&
-                heap.get(der).frecuencia < heap.get(menor).frecuencia) {
+                heap.get(der).getFrecuencia() < heap.get(menor).getFrecuencia()) {
+
             menor = der;
         }
 
